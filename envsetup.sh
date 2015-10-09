@@ -594,6 +594,8 @@ function lunch()
 
     export TARGET_BUILD_APPS=
 
+    local device=$(echo -n $selection | sed -e "s/[^_]*_\([^-]*\).*/\1/")
+
     local product variant_and_version variant version
 
     product=${selection%%-*} # Trim everything after first dash
@@ -622,6 +624,7 @@ function lunch()
     fi
 
     export TARGET_PRODUCT=$(get_build_var TARGET_PRODUCT)
+    export TARGET_DEVICE=$device
     export TARGET_BUILD_VARIANT=$(get_build_var TARGET_BUILD_VARIANT)
     if [ -n "$version" ]; then
       export TARGET_PLATFORM_VERSION=$(get_build_var TARGET_PLATFORM_VERSION)
