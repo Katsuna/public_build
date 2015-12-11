@@ -631,6 +631,7 @@ function lunch()
     else
       unset TARGET_PLATFORM_VERSION
     fi
+    export TARGET_ARCH=$(gettargetarch)
     export TARGET_BUILD_TYPE=release
 
     echo
