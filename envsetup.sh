@@ -635,6 +635,9 @@ function lunch()
     set_stuff_for_environment
     printconfig
     destroy_build_var_cache
+
+   #Populate Katsuna version
+   source vendor/katsuna/rom_version.sh
 }
 
 # Tab completion for lunch.
