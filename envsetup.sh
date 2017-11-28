@@ -1767,3 +1767,5 @@ done
 unset f
 
 addcompletions
+
+export ANDROID_BUILD_TOP=$(gettop)
