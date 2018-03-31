@@ -631,6 +631,7 @@ function lunch()
     else
       unset TARGET_PLATFORM_VERSION
     fi
+    export TARGET_SDK_VERSION=$(get_build_var PLATFORM_SDK_VERSION)
     export TARGET_ARCH=$(gettargetarch)
     export TARGET_BUILD_TYPE=release
 
