@@ -25,7 +25,6 @@ PRODUCT_PACKAGES := \
     MusicFX \
     NfcNci \
     OneTimeInitializer \
-    Provision \
     SystemUI \
     SysuiDarkThemeOverlay \
     EasterEgg \
