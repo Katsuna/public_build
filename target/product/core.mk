@@ -30,7 +30,6 @@ PRODUCT_PACKAGES += \
     CalendarProvider \
     CaptivePortalLogin \
     CertInstaller \
-    DeskClock \
     DocumentsUI \
     DownloadProviderUi \
     Email \
