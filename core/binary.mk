@@ -33,6 +33,8 @@ endif
 
 my_soong_problems :=
 
+# Only modify the kernel dependencies if we are compiling inline (this supports the default AOSP prebuilt way)
+ifneq ($(TARGET_COMPILE_WITH_MSM_KERNEL),)
 # The proper dependency for kernel headers is INSTALLED_KERNEL_HEADERS.
 # However, there are many instances of the old style dependencies in the
 # source tree.  Fix them up and warn the user.
@@ -49,6 +51,7 @@ ifneq (,$(findstring $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include,$(LOCAL_
     LOCAL_ADDITIONAL_DEPENDENCIES += INSTALLED_KERNEL_HEADERS
   endif
 endif
+endif #TARGET_COMPILE_WITH_MSM_KERNEL
 
 # The following LOCAL_ variables will be modified in this file.
 # Because the same LOCAL_ variables may be used to define modules for both 1st arch and 2nd arch,
